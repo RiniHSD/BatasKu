@@ -76,20 +76,18 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
+          <Section title="PRESISI">
+            PRESISI dirancang untuk memudahkan pengukuran dan pemetaan batas desa secara akurat. Dengan Aplikasi ini, Anda bisa menetapkan patok desa, melacak lokasinya, dan melihatnya langsung di peta. Tujuan Kami adalah membantu masyarakat dan pihak berwenang untuk menetapkan batas desa dengan jelas, mengurangi perselisihan, dan meningkatkan pengelolaan lahan.
           </Section>
           <LearnMoreLinks />
+          {/* Kontainer untuk kontak */}
+          <View style={styles.contactContainer}>
+            <Text style={styles.contactText}>
+              Untuk bantuan atau pertanyaan, silakan hubungi kontak berikut{'\n'}
+              Email: presisi@gmail.com{'\n'}
+              No Telp: +123456789
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -112,6 +110,17 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  contactContainer: {
+    marginTop: 20,
+    padding: 16,
+    backgroundColor: '#e0e0e0', // warna abu-abu
+    borderRadius: 8,
+  },
+  contactText: {
+    fontSize: 16,
+    fontWeight: '400',
+    color: '#333333',
   },
 });
 
